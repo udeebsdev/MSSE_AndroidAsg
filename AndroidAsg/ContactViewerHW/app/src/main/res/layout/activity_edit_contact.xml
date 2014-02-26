@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.contactviewerhw.app.EditContact"
+    tools:ignore="MergeRootFrame">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                />
+            <ImageView
+                android:id="@+id/contact_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="16dp"
+                android:layout_margin="8dp"
+                android:layout_below="@id/header"
+                android:src="@drawable/contact"
+                android:background="#00FFFF"
+                />
+            <TextView
+                android:id="@+id/firstname_label_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/contact_image"
+                android:layout_alignTop="@id/contact_image"
+                android:text="@string/firstname_label"
+                />
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstname_label_view"
+                android:layout_toRightOf="@id/contact_image"
+                android:text="@string/firstname"
+                />
+            <TextView
+                android:id="@+id/lastname_label_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/contact_image"
+                android:layout_below="@id/firstname"
+                android:text="@string/lastname_label"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastname_label_view"
+                android:layout_toRightOf="@id/contact_image"
+                android:text="@string/lastname"
+                />
+            <TextView
+                android:id="@+id/alias_label_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/contact_image"
+                android:layout_below="@id/lastname"
+                android:text="@string/alias_label"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/alias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alias_label_view"
+                android:layout_toRightOf="@id/contact_image"
+                android:text="@string/alias"
+                />
+
+            <TextView
+                style="@style/DetailsLabelsText"
+                android:id="@+id/business_label_edit_view"
+                android:layout_below="@id/contact_image"
+                android:text="@string/business_label"
+                />
+            <EditText
+                android:id="@+id/business_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/business_label_edit_view"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                style="@style/DetailsLabelsText"
+                android:id="@+id/phone_label_edit_view"
+                android:layout_below="@id/business_edit"
+                android:text="@string/phone_label"
+                />
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_label_edit_view"
+                android:layout_marginBottom="16dp"
+                />
+            <Spinner
+                android:id="@+id/phone_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/phone_edit"
+                android:layout_below="@id/phone_label_edit_view"
+                android:entries="@array/phone_options"
+                />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
